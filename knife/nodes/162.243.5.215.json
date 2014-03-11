@@ -1,0 +1,24 @@
+{
+  "app": {
+    "name": "zenappointments_www",
+    "web_dir": "/var/data/www/apps/zenappointments_www"
+  },
+  "nginx": {
+    "version": "1.4.4",
+    "default_site_enabled": true,
+    "source": {
+      "modules": [
+        "nginx::http_gzip_static_module", "nginx::http_ssl_module",
+        "nginx::http_realip_module", "nginx::http_stub_status_module",
+        "nginx::upload_progress_module"]
+      }
+  },
+  "user": {
+    "name": "deployer",
+    "password": "$1$XPbQutf2$V64i.z0m54zecNcwQhHeq0"
+  },
+  "run_list": [
+    "recipe[nginx::source]",
+    "recipe[zenappointments_www]"
+  ]
+}
