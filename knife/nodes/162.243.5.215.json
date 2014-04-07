@@ -4,7 +4,7 @@
     "web_dir": "/var/data/www/apps/zenappointments_www"
   },
   "nginx": {
-    "version": "1.4.4",
+    "version": "1.4.5",
     "default_site_enabled": true,
     "source": {
       "modules": [
